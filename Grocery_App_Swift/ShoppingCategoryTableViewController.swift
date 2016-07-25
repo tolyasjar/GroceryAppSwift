@@ -42,6 +42,8 @@ class ShoppingCategoryTableViewController: UITableViewController, AddingNewCateg
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         try! self.fetchedResultsController.performFetch()
+        
+         self.tableView.reloadData()
 
     }
     
